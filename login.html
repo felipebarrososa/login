@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js"></script>
+  <style>
+    .password-container {
+      position: relative;
+    }
+    .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <div class="login-container">
+      <span id="emoji" class="emoji">&#x1F64A;</span> <!-- Macaquinho com a mao na boca  -->
+      <h2>Bem-vindo!</h2>
+      <input type="text" id="username" placeholder="Usuario" oninput="moveEyes(event)">
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Senha" oninput="moveEyes(event)">
+        <span id="password-toggle" class="password-toggle" onclick="togglePasswordVisibility()">&#x1F441;&#xFE0F;</span> <!-- Olho -->
+      </div>
+      <button onclick="checkLogin()">Entrar</button>
+      <p id="message"></p>
+    </div>
+</body>
+</html>
+
